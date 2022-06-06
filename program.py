@@ -1,8 +1,12 @@
-def fib(n):                                     #a function that returns the fibonacci number in a series with (0, 1, 1, 2, 3, 5...)
-    if n > 3: return fib(n - 1) + fib(n - 2)
-    if n > 1: return 1
-    return 0
+def fib(n):                                     #the function prints the first n fibonacci numbers iteratively
+    n_1 = 0
+    n_2 = 1
+    while(n > 0):
+        print(n_1)
+        n_1, n_2 = n_2, n_1 + n_2
+        n -= 1
+
 
 print("Hello, World!")
 
-print(fib(10))                                  #example of using fib(number)
+fib(10)                                         #example of using fib(number)
